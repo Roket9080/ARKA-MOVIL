@@ -1,19 +1,341 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@drawable/fondo_arka"
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="20dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- ENCABEZADO -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:background="@drawable/fondo_tarjeta">
+
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/angel"
+                android:contentDescription="Logo de ARKA"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:text="ARKA"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/btnEmergencia"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:background="@drawable/fondo_emergencia"
+                android:backgroundTint="@null"
+                android:text="Emergencia"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+        <!-- PRESENTACIÓN -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="RF-NU-005 · ATENCIÓN EN SALUD"
+            android:textColor="#C89BF5"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Tu bienestar es nuestra prioridad"
+            android:textColor="#FFFFFF"
+            android:textSize="29sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Solicita orientación y acompañamiento de un profesional en salud para cuidar tu bienestar físico y mental."
+            android:textColor="#A5A1B2"
+            android:textSize="15sp"
+            android:lineSpacingExtra="5dp"/>
+
+        <!-- FORMULARIO DE SOLICITUD -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:padding="22dp"
+            android:background="@drawable/fondo_tarjeta">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Solicitud de atención"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Completa los siguientes datos para preparar tu solicitud."
+                android:textColor="#A5A1B2"
+                android:textSize="13sp"/>
+
+            <!-- NOMBRE -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Nombre completo *"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"/>
+
+            <EditText
+                android:id="@+id/edtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Escribe tu nombre"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#81788D"
+                android:backgroundTint="#A855F7"
+                android:minHeight="48dp"/>
+
+            <!-- MOTIVO -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="Motivo de la solicitud *"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"/>
+
+            <EditText
+                android:id="@+id/edtMotivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="¿En qué necesitas orientación?"
+                android:inputType="textMultiLine|textCapSentences"
+                android:gravity="top|start"
+                android:minLines="3"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#81788D"
+                android:backgroundTint="#A855F7"/>
+
+            <!-- INFORMACIÓN CLÍNICA -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="Antecedentes de salud (opcional)"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"/>
+
+            <EditText
+                android:id="@+id/edtAntecedentes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Información relevante que desees compartir"
+                android:inputType="textMultiLine|textCapSentences"
+                android:gravity="top|start"
+                android:minLines="3"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#81788D"
+                android:backgroundTint="#A855F7"/>
+
+            <!-- EVALUACIÓN INICIAL -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="¿Cómo te sientes actualmente?"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <RadioGroup
+                android:id="@+id/grupoBienestar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radioBien"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Me siento bien"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#C89BF5"/>
+
+                <RadioButton
+                    android:id="@+id/radioRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="He tenido algunas dificultades"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#C89BF5"/>
+
+                <RadioButton
+                    android:id="@+id/radioMal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Estoy pasando por un momento difícil"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#C89BF5"/>
+
+            </RadioGroup>
+
+            <!-- EVALUACIONES PREVIAS -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Evaluaciones previas (opcional)"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"/>
+
+            <EditText
+                android:id="@+id/edtEvaluacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Resultados que desees compartir"
+                android:inputType="textMultiLine|textCapSentences"
+                android:gravity="top|start"
+                android:minLines="2"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#81788D"
+                android:backgroundTint="#A855F7"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Los datos de este prototipo no se envían ni almacenan. No constituye un servicio de atención clínica."
+                android:textColor="#A5A1B2"
+                android:textSize="12sp"/>
+
+            <!-- BOTÓN SOLICITUD -->
+
+            <Button
+                android:id="@+id/btnSolicitarAtencion"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/fondo_boton"
+                android:backgroundTint="@null"
+                android:text="Preparar solicitud"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+        <!-- RESULTADOS ESPERADOS -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:padding="22dp"
+            android:orientation="vertical"
+            android:background="@drawable/fondo_tarjeta">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seguimiento profesional"
+                android:textColor="#FFFFFF"
+                android:textSize="21sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Después de una valoración real, un profesional en salud podrá elaborar:"
+                android:textColor="#A5A1B2"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="✓ Reporte de valoración psicológica o en salud\n\n✓ Plan de intervención o tratamiento\n\n✓ Estrategias de prevención y recomendaciones personalizadas\n\n✓ Registro de seguimiento del caso"
+                android:textColor="#D8B4FE"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <!-- EMERGENCIA -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="¿Necesitas ayuda inmediata?"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/btnIrEmergencia"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/fondo_emergencia"
+            android:backgroundTint="@null"
+            android:text="Ir a atención de emergencia"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="25dp"
+            android:text="ARKA | Prevención del Suicidio\nEsta aplicación no reemplaza la atención profesional."
+            android:textColor="#858095"
+            android:textSize="12sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</ScrollView>
