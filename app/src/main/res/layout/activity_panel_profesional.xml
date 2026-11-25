@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F6F9"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Panel del Profesional"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#0E4B6E" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="ARKA · No estás solo | Atención Psicosocial"
+        android:textSize="14sp"
+        android:textColor="#5C6F7B" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="18dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chats Grupales de Apoyo"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#0C1419" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Participa, observa interacciones y brinda orientación a los grupos activos."
+            android:textSize="14sp"
+            android:textColor="#4C5D68" />
+
+        <Button
+            android:id="@+id/btnIrChatGrupal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Ingresar a Salas Grupales"
+            android:textAllCaps="false"
+            android:backgroundTint="#0E4B6E"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="18dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Atención Individual (Usuarios en Riesgo)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#9C2B23" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Canal directo de apoyo inmediato y contención emocional 1 a 1."
+            android:textSize="14sp"
+            android:textColor="#4C5D68" />
+
+        <Button
+            android:id="@+id/btnIrChatPersonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Atender Chat Personal"
+            android:textAllCaps="false"
+            android:backgroundTint="#9C2B23"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</LinearLayout>
