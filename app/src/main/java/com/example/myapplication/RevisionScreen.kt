@@ -99,7 +99,7 @@ fun RevisionScreen() {
                 )
             }
         }
-
+        // Card Container for "Registrar / Gestionar Revisión"
         // Card Container for "Registrar / Gestionar Revisión"
         Card(
             modifier = Modifier.fillMaxWidth(),
