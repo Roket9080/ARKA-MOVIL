@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="arka_bg">#09070F</color>
+    <color name="arka_card_bg">#12101C</color>
+    <color name="arka_card_stroke">#252038</color>
+    <color name="arka_purple">#8B5CF6</color>
+    <color name="arka_purple_light">#A78BFA</color>
+    <color name="arka_purple_badge_bg">#1E1633</color>
+    <color name="arka_crisis_red">#E11D48</color>
+    <color name="arka_text_primary">#FFFFFF</color>
+    <color name="arka_text_secondary">#9CA3AF</color>
 </resources>
