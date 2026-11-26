@@ -1,10 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_ubicacion_paciente">
+    android:background="@color/arka_bg_primary"
+    android:fillViewport="true"
+    android:padding="20dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Tarjeta contenedora principal -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_arka_card"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Encabezado: Logo + Nombre ARKA -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_arka_input"
+                    android:padding="1dp">
+
+                    <ImageView
+                        android:id="@+id/ivLogoArka"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="Logo ARKA"
+                        android:src="@drawable/logo_arka" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tvNombreMarca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/app_brand_name"
+                    android:textColor="@color/arka_purple_light"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Título principal -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:text="Ubicación del paciente"
+                android:textColor="@color/arka_purple_light"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <!-- Campo: Paciente -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="Paciente"
+                android:textColor="@color/arka_text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etPaciente"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_arka_input"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="14dp"
+                android:textColor="@color/arka_text_primary"
+                android:textSize="14sp" />
+
+            <!-- Campo: Latitud -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="Latitud"
+                android:textColor="@color/arka_text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etLatitud"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_arka_input"
+                android:inputType="numberDecimal|numberSigned"
+                android:paddingHorizontal="14dp"
+                android:textColor="@color/arka_text_primary"
+                android:textSize="14sp" />
+
+            <!-- Campo: Longitud -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="Longitud"
+                android:textColor="@color/arka_text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etLongitud"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_arka_input"
+                android:inputType="numberDecimal|numberSigned"
+                android:paddingHorizontal="14dp"
+                android:textColor="@color/arka_text_primary"
+                android:textSize="14sp" />
+
+            <!-- Campo: Motivo -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="Motivo"
+                android:textColor="@color/arka_text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etMotivo"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_arka_input"
+                android:inputType="text"
+                android:paddingHorizontal="14dp"
+                android:textColor="@color/arka_text_primary"
+                android:textSize="14sp" />
+
+            <!-- Checkbox de autorización -->
+            <CheckBox
+                android:id="@+id/cbAutorizoUbicacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:buttonTint="@color/arka_purple_light"
+                android:paddingStart="6dp"
+                android:text="Autorizo compartir mi ubicación"
+                android:textColor="@color/arka_text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Botón Guardar ubicación -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGuardarUbicacion"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_btn_evaluacion"
+                android:text="Guardar ubicación"
+                android:textAllCaps="false"
+                android:textColor="@color/arka_text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

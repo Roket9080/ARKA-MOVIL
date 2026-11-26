@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">ARKA MÓVIL</string>
+    <string name="app_brand_name">ARKA</string>
+
+    <string-array name="niveles_riesgo">
+        <item>Seleccione un nivel...</item>
+        <item>Bajo</item>
+        <item>Medio</item>
+        <item>Alto</item>
+        <item>Crítico</item>
+    </string-array>
 </resources>

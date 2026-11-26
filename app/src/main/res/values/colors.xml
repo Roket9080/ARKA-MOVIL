@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Fondos y Superficies -->
+    <color name="arka_bg_primary">#0B0810</color>       <!-- Fondo principal ultra oscuro -->
+    <color name="arka_surface_card">#14101D</color>     <!-- Fondo de tarjetas (01, 02, 03) -->
+    <color name="arka_surface_stroke">#261E35</color>   <!-- Borde sutil de tarjetas y botones -->
+
+    <!-- Acentos de Marca -->
+    <color name="arka_purple_light">#A78BFA</color>    <!-- Texto destacado ("cuidar la vida", "01") -->
+    <color name="arka_purple_primary">#7C3AED</color>  <!-- Inicio de degradado botón principal -->
+    <color name="arka_cyan_accent">#06B6D4</color>     <!-- Fin de degradado botón principal -->
+    <color name="arka_crisis_red">#BE123C</color>      <!-- Botón "Línea de Crisis" -->
+
+    <!-- Tipografía -->
+    <color name="arka_text_primary">#FFFFFF</color>    <!-- Títulos y números principales -->
+    <color name="arka_text_secondary">#9CA3AF</color>  <!-- Párrafos descriptivos -->
 </resources>
