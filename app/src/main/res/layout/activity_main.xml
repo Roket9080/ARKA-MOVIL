@@ -25,19 +25,24 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <FrameLayout
+
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:background="@drawable/bg_arka_input"
-                android:padding="1dp">
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/arka_purple_light"
+                app:strokeWidth="1.5dp">
 
                 <ImageView
                     android:id="@+id/ivLogoArka"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:contentDescription="Logo ARKA"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/logo_arka" />
-            </FrameLayout>
+            </com.google.android.material.card.MaterialCardView>
 
             <TextView
                 android:id="@+id/tvNombreMarca"
